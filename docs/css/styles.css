@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
 
-
-/*GLOBAL*/
+/* GLOBAL */
 body {
     padding-top: 5rem;
-
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display', serif;
 }
 
-
 main {
     padding: 20px;
 }
+
 main.container-fluid {
     width: 50%;
 }
@@ -32,8 +30,8 @@ nav {
     margin-left: 20px;
 }
 
-button.navbar-toggler{
-margin-right: 10px;
+button.navbar-toggler {
+    margin-right: 10px;
 }
 
 .home_2col {
@@ -41,5 +39,85 @@ margin-right: 10px;
 }
 
 img.dibley {
-    max-width: 100%
+    max-width: 100%;
+}
+
+/* GRID PAGE STYLES */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    grid-template-rows: auto auto auto; /* Three rows layout: Top, middle, bottom */
+    grid-template-areas:
+        "box1 box1"
+        "box2 box3"
+        "box4 box5"; /* Define areas */
+    gap: 3px; /* Space between boxes */
+    margin: 20px 0;
+    padding: 10px;
+}
+
+/* Specific Box Styles */
+.box1 {
+    grid-area: box1;
+    background-color: #f99;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 150px; /* Example height for rectangle */
+}
+
+.box2 {
+    grid-area: box2;
+    background-color: #9f9;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 100px; /* Example height for square */
+}
+
+.box3 {
+    grid-area: box3;
+    background-color: #99f;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 75px; /* Thinner rectangle */
+}
+
+.box4 {
+    grid-area: box4;
+    background-color: #ff9;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 100px; /* Small square */
+}
+
+.box5 {
+    grid-area: box5;
+    background-color: #f9f;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 100px; /* Rectangle */
 }
