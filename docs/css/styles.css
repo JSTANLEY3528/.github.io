@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
-
 /* GLOBAL */
 body {
     padding-top: 5rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -45,12 +43,13 @@ img.dibley {
 /* GRID PAGE STYLES */
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-    grid-template-rows: auto auto auto; /* Three rows layout */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+    grid-template-rows: auto auto auto auto; /* Four rows layout */
     grid-template-areas:
-        "box1 box1"
-        "box2 box4"
-        "box3 box5"; /* Updated areas */
+        "box1 box1 box1"
+        "box2 box3 box3"
+        "box2 box4 box5"
+        "box6 box6 box6"; /* Box6 below Box2, Box4, and Box5 */
     gap: 3px;
     margin: 20px 0;
     padding: 10px;
@@ -67,7 +66,7 @@ img.dibley {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #333;
-    height: 150px; /* Original height */
+    height: 150px;
 }
 
 .box2 {
@@ -80,7 +79,7 @@ img.dibley {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #333;
-    height: 100px; /* Adjusted size */
+    height: 200px; /* Adjusted size */
 }
 
 .box3 {
@@ -93,7 +92,7 @@ img.dibley {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #333;
-    height: 37.5px; /* 50% less height from 75px */
+    height: 100px; /* Shorter than Box2 */
 }
 
 .box4 {
@@ -106,7 +105,7 @@ img.dibley {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #333;
-    height: 30px; /* 70% reduction from 100px */
+    height: 50px; /* Adjust size to fit under Box3 */
 }
 
 .box5 {
@@ -119,7 +118,20 @@ img.dibley {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #333;
-    height: 30px; /* 70% reduction from 100px */
+    height: 50px; /* Adjust size to match Box4 */
+}
+
+.box6 {
+    grid-area: box6;
+    background-color: #f99; /* Pink color similar to Box1 */
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    height: 75px; /* Height adjusted to fit the layout */
 }
 
 /* Responsive Design */
@@ -131,6 +143,7 @@ img.dibley {
             "box2"
             "box3"
             "box4"
-            "box5"; /* Stack all boxes vertically */
+            "box5"
+            "box6"; /* Stack all boxes vertically */
     }
 }
