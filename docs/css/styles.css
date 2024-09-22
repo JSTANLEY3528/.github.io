@@ -147,3 +147,7 @@ img.dibley {
             "box6"; /* Stack all boxes vertically */
     }
 }
+.standard-img {
+    width: 700px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
